@@ -34,26 +34,14 @@ __Design:__
     Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
     all Mutexes or Condvars, or an aggregate of those, e.g., a tuple, or struct like BlockingQueue.
 
-    An instance of BlockingQueue&lt;T&gt; can be shared between threads because it only has two fields
+    An instance of BlockingQueue<T> can be shared between threads because it only has two fields
     and those are share-able.  One is a Mutex<VecDeque<T>>, and the other is a Condvar,
     e.g., a condition variable.
 
 <h3>Operation:</h3>
-<t-b class="indent">
-  Operation is illustrated by the test1.rs in /examples.
-</t-b>
+
+Operation is illustrated by the test1.rs in /examples.
+
 <h3>Build:</h3>
-<t-b class="indent">
-  Download and, in a command prompt, <c-s>cargo build</c-s> or <c-s>cargo run</c-s>.
-</t-b>
-  </t-b>
-</t-b>
-<div class="clear"></div>
-<h3>Operation:</h3>
-<t-b class="indent">
-  Operation is illustrated by the test1.rs in /examples.
-</t-b>
-<h3>Build:</h3>
-<t-b class="indent">
-  Download and, in a command prompt, <c-s>cargo build</c-s> or <c-s>cargo run</c-s>.
-</t-b>
+
+Download and, in a command prompt, <c-s>cargo build</c-s> or <c-s>cargo run</c-s>.
