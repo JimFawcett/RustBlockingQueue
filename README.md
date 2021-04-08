@@ -20,16 +20,16 @@ __Design:__
   
     Methods:
       1. new() -> Self
-          Create new BlockingQueue which is empty.
+           Create new empty BlockingQueue<T>.
  
-      2. en_q(&self, t: T) -> Result&lt;()&gt;
-          Push_back t onto internal VecDec&lt;T&gt;.
+      2. en_q(&self, t: T) -> Result<()>
+          Push_back t onto internal VecDec<T>.
   
-      3. de_q(&self) -> Result&lt;T&gt;
-          Pop_front t from internal VecDec&lt;T&gt;.
+      3. de_q(&self) -> Result<T>;
+           Pop_front t from internal VecDec<T>.
 
       4. len(&self) -> usize
-          Return number of elements stored in queue.
+           Return number of elements stored in queue.
 
 <t-b>
     Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
