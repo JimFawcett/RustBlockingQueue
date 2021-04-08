@@ -9,8 +9,7 @@ __Concept:__
   RustBlockingQueue is a facility for communicating between threads using a thread-safe blocking queue.  Note that
   the Rust message-passing facility does about the same thing.
 
-  This is a nice illustration of how to build a data structure that can be shared between threads.  I intend to compare
-  performance of this facility with message passing some time soon.
+  This is a nice illustration of how to build a data structure that can be shared between threads.
 
 __Design:__
 
