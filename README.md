@@ -13,7 +13,7 @@ Thread safe queue that blocks dequeuer when empty
   performance of this facility with message passing some time soon.
 
 #Design:
-  <img src="Pictures/BlockingQDiagram.JPG" width="500" />>
+  <img src="https://JimFawcett.github.io/Pictures/BlockingQDiagram.JPG" width="500" />>
 <photosizer-block src="Pictures/BlockingQDiagram.JPG" width="500" class="photoSizerBlock right" style="margin-top:0;">
           <span style="
           display: inline-block;
