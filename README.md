@@ -35,31 +35,8 @@ __Design:__
     all Mutexes or Condvars, or an aggregate of those, e.g., a tuple, or struct like BlockingQueue.
 
     An instance of BlockingQueue&lt;T&gt; can be shared between threads because it only has two fields
-    and those are share-able.  One is a Mutex&lt;VecDeque&lt;T&gt;&gt;, and the other is a Condvar,
+    and those are share-able.  One is a Mutex<VecDeque<T>>, and the other is a Condvar,
     e.g., a condition variable.
-      1. <strong><c-s>new() -> Self</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
-          Create new <c-s>BlockingQueue</c-s> which is empty.
-        </div>
-      2. <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
-          Push_back t onto internal VecDec&lt;T&gt;.
-        </div>
-      3. <strong><c-s>de_q(&self) -> Result&lt;T&gt;</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
-          Pop_front t from internal VecDec&lt;T&gt;.
-        </div>
-      4. <strong><c-s>len(&self) -> usize</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
-          Return number of elements stored in queue.
-        </div>
-
-Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
-all Mutexes or Condvars, or an aggregate of those, e.g., a tuple, or struct like BlockingQueue.
-
-An instance of BlockingQueue&lt;T&gt; can be shared between threads because it only has two fields
-and those are share-able.  One is a Mutex&lt;VecDeque&lt;T&gt;&gt;, and the other is a Condvar,
-e.g., a condition variable.
 
 <h3>Operation:</h3>
 <t-b class="indent">
