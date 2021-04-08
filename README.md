@@ -19,7 +19,7 @@ __Design:__
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
     Methods:
-      1. !!new() -> Self!!
+      1. **new() -> Self**
           Create new BlockingQueue which is empty.
  
       2. <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
