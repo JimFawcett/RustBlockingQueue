@@ -4,7 +4,7 @@ https://JimFawcett.github.io/RustBlockingQueue.html
 
 Thread safe queue that blocks dequeuer when empty
 
-#Concept:
+##Concept:
 
   RustBlockingQueue is a facility for communicating between threads using a thread-safe blocking queue.  Note that
   the Rust message-passing facility does about the same thing.
@@ -12,17 +12,16 @@ Thread safe queue that blocks dequeuer when empty
   This is a nice illustration of how to build a data structure that can be shared between threads.  I intend to compare
   performance of this facility with message passing some time soon.
 
-#Design:
+##Design:
 
   <img src="https://JimFawcett.github.io/Pictures/BlockingQDiagram.JPG" width="500" />
   
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
     Methods:
-      1. <strong><c-s>new() -> Self</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
-          Create new <c-s>BlockingQueue</c-s> which is empty.
-        </div>
+      1. ##new() -> Self
+          Create new BlockingQueue which is empty.
+ 
       2. <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
         <div style="padding:3px 10px 5px 10px;">
           Push_back t onto internal VecDec&lt;T&gt;.
