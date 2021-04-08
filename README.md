@@ -14,7 +14,8 @@ Thread safe queue that blocks dequeuer when empty
 
 #Design:
 
-  <img src="https://JimFawcett.github.io/Pictures/BlockingQDiagram.JPG" width="500" />>
+  <img src="https://JimFawcett.github.io/Pictures/BlockingQDiagram.JPG" width="500" />
+  
     There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
     <indent-block class="pad5">
       Methods:
