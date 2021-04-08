@@ -19,21 +19,17 @@ __Design:__
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
     Methods:
-      1. **new() -> Self**
+      1. new() -> Self
           Create new BlockingQueue which is empty.
  
-      2. <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
+      2. en_q(&self, t: T) -> Result&lt;()&gt;
           Push_back t onto internal VecDec&lt;T&gt;.
-        </div>
-      3. <strong><c-s>de_q(&self) -> Result&lt;T&gt;</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
+  
+      3. de_q(&self) -> Result&lt;T&gt;
           Pop_front t from internal VecDec&lt;T&gt;.
-        </div>
-      4. <strong><c-s>len(&self) -> usize</c-s></strong>
-        <div style="padding:3px 10px 5px 10px;">
+
+      4. len(&self) -> usize
           Return number of elements stored in queue.
-        </div>
 
 <t-b>
     Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
