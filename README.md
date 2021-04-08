@@ -16,36 +16,36 @@ Thread safe queue that blocks dequeuer when empty
 
   <img src="https://JimFawcett.github.io/Pictures/BlockingQDiagram.JPG" width="500" />
   
-    There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
-    <indent-block class="pad5">
-      Methods:
-      <ol class="tight">
-        <li>
-          <strong><c-s>new() -> Self</c-s></strong>
-          <div style="padding:3px 10px 5px 10px;">
-            Create new <c-s>BlockingQueue</c-s> which is empty.
-          </div>
-        </li>
-        <li>
-          <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
-          <div style="padding:3px 10px 5px 10px;">
-            Push_back t onto internal VecDec&lt;T&gt;.
-          </div>
-        </li>
-        <li>
-          <strong><c-s>de_q(&self) -> Result&lt;T&gt;</c-s></strong>
-          <div style="padding:3px 10px 5px 10px;">
-            Pop_front t from internal VecDec&lt;T&gt;.
-          </div>
-        </li>
-        <li>
-          <strong><c-s>len(&self) -> usize</c-s></strong>
-          <div style="padding:3px 10px 5px 10px;">
-            Return number of elements stored in queue.
-          </div>
-        </li>
-      </ol>
-    </indent-block>
+  There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
+  
+    Methods:
+    <ol class="tight">
+      <li>
+        <strong><c-s>new() -> Self</c-s></strong>
+        <div style="padding:3px 10px 5px 10px;">
+          Create new <c-s>BlockingQueue</c-s> which is empty.
+        </div>
+      </li>
+      <li>
+        <strong><c-s>en_q(&self, t: T) -> Result<()></()></c-s></strong>
+        <div style="padding:3px 10px 5px 10px;">
+          Push_back t onto internal VecDec&lt;T&gt;.
+        </div>
+      </li>
+      <li>
+        <strong><c-s>de_q(&self) -> Result&lt;T&gt;</c-s></strong>
+        <div style="padding:3px 10px 5px 10px;">
+          Pop_front t from internal VecDec&lt;T&gt;.
+        </div>
+      </li>
+      <li>
+        <strong><c-s>len(&self) -> usize</c-s></strong>
+        <div style="padding:3px 10px 5px 10px;">
+          Return number of elements stored in queue.
+        </div>
+      </li>
+    </ol>
+  </indent-block>
   </t-b>
   <t-b>
     Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
