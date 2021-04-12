@@ -18,6 +18,7 @@ __Design:__
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
     Methods:
+ ```rust
       1. new() -> Self
            Create new empty BlockingQueue<T>.
  
@@ -29,7 +30,7 @@ __Design:__
 
       4. len(&self) -> usize
            Return number of elements stored in queue.
-
+```
     Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
     all Mutexes or Condvars, or an aggregate of those, e.g., a tuple, or struct like BlockingQueue.
 
