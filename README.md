@@ -19,6 +19,7 @@ __Design:__
   
 ```
 Methods:
+
 1. new() -> Self
        Create new empty BlockingQueue<T>.
  
