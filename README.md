@@ -49,4 +49,7 @@ Operation is illustrated by the test1.rs in /examples.
 
 <h3>Build:</h3>
 
-Download and, in a command prompt, <c-s>cargo build</c-s> or <c-s>cargo test</c-s> or <c-s>cargo run --example test1.rs</c-s>.
+Download and, in a command prompt, use one of the following:
+- <c-s>cargo build</c-s>
+- <c-s>cargo test</c-s>
+- <c-s>cargo run --example test1.rs</c-s>.
