@@ -18,7 +18,7 @@ __Design:__
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
     Methods:
- ```rust
+```rust
       1. new() -> Self
            Create new empty BlockingQueue<T>.
  
