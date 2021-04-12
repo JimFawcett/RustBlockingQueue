@@ -32,7 +32,7 @@ Methods:
   4. len(&self) -> usize
        Return number of elements stored in queue.
 ```
-    Sharing between threads is only possible, due to rules of the Rust language, if the shared items are 
+    Sharing between threads is only possible, due to rules of the Rust language, if the shared items are
     all Mutexes or Condvars, or an aggregate of those, e.g., a tuple, or struct like BlockingQueue.
 
     An instance of BlockingQueue<T> can be shared between threads because it only has two fields
