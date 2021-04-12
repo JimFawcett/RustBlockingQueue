@@ -18,7 +18,12 @@ __Design:__
   There is one struct, BlockingQueue&lt;T&gt;, with a few methods in this design:
   
 ```rust
-Methods:
+
+  #[derive(Debug)]
+  pub struct BlockingQueue<T> {
+    q: Mutex<VecDeque<T>>,
+    cv: Condvar,
+  }
 
   1. new() -> Self
        Create new empty BlockingQueue<T>.
