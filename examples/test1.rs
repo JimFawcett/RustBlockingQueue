@@ -11,6 +11,7 @@ use std::io::*;
 use std::sync::*;
 use std::thread;
 use rust_blocking_queue::{BlockingQueue};
+use std::time::Duration;
 
 fn main() {
 
@@ -34,6 +35,7 @@ fn test() {
     let handle = thread::spawn(move || {
         print!("\n  child thread started");
         flush();
+        let dur = Duration::from_millis(50);
         loop {
             let t = share1.de_q();
             print!("\n  dequeued {} on child thread", t);
@@ -41,17 +43,20 @@ fn test() {
             if &t == "quit" {
                 break;
             }
+            thread::sleep(dur);
         }
         print!("\n  thread shutting down");
         flush();
     });
 
     /*-- main thread enqueues messages --*/
+    let dur = Duration::from_millis(20);
     for i in 0..5 {
         let msg = format!("msg #{}", i.to_string());
         print!("\n  enqueued {:?} on main thread", msg);
         flush();
         share2.en_q(msg);
+        thread::sleep(dur);
     }
     /*-- shut down child thread --*/
     print!("\n  enqueued {:?} on main thread", "quit");
