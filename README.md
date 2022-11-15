@@ -1,6 +1,6 @@
 # RustBlockingQueue
 
-https://JimFawcett.github.io/RustBlockingQueue.html
+<a href="https://JimFawcett.github.io/RustBlockingQueue.html">Documentation</a>
 
 Thread safe queue that blocks dequeuer when empty
 
